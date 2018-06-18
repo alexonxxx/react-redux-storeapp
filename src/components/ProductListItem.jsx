@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import StateLink from '../containers/StateLink';
+import StateAdd from '../containers/StateAdd';
 
 class ProductListItem extends Component {
   render() {
@@ -21,9 +22,8 @@ class ProductListItem extends Component {
         <div style={{ flex: '1' }}>
           <h4 style={{ margin: '0' }}>{this.props.product.name}</h4>
           <h3 style={{ margin: '0' }}>{this.props.product.price}€</h3>
-          <button style={{ background: '#FFD52E' }} onClick={() => 'XXX'}>
-            BUY (if none in cart), ADD (if any in cart) XXX
-          </button>
+          <StateAdd product={this.props.product}>Add in card</StateAdd>
+
           <StateLink view="detail" itemId={this.props.product.id}>
             details...
           </StateLink>

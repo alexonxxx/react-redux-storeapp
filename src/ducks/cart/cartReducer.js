@@ -1,10 +1,9 @@
-import { DECREMENT_QUANTITY, DROP_LINE_ITEM, INCREMENT_QUANTITY } from ".";
+import { DECREMENT_QUANTITY, DROP_LINE_ITEM, INCREMENT_QUANTITY } from '.';
 
 const cartReducer = (state = [], action) => {
   switch (action.type) {
     case DECREMENT_QUANTITY: {
       const { productId } = action;
-
       const index = state.findIndex(lineItem => lineItem.id === productId);
       if (index === -1) return state;
 
