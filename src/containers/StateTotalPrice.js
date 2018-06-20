@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { getTotalPrice } from '../ducks/cart';
-import TotalPrice from '../components/TotalPrice';
+import TotalPriceCart from '../components/TotalPriceCart';
 
 const mapStateToProps = (state, ownProps) => ({
   totalPrice: getTotalPrice(state)
@@ -8,9 +8,9 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = (dispatch, ownProps) => ({});
 
-const StateTotalPrice = connect(
+const StateTotalItems = connect(
   mapStateToProps,
   mapDispatchToProps
-)(TotalPrice);
+)(TotalPriceCart);
 
-export default StateTotalPrice;
+export default StateTotalItems;

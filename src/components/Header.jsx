@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import StateLink from '../containers/StateLink';
-import StateTotalPrice from '../containers/StateTotalPrice';
 import StateTotalItems from '../containers/StateTotalItems';
 
 class Header extends Component {
@@ -19,9 +18,8 @@ class Header extends Component {
           <StateLink view="main">Online Fruit Shop</StateLink>
         </strong>
         <span>
-          <StateLink style={{ display: 'inline-block' }} view="cart">
+          <StateLink view="cart">
             <StateTotalItems />
-            <StateTotalPrice />
           </StateLink>
         </span>
       </div>

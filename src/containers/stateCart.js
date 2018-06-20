@@ -1,12 +1,9 @@
 import { connect } from 'react-redux';
-import { incrementQuantity } from '../ducks/cart';
-import AddButton from '../components/AddButton';
-import { getLineItem, listLineItems } from '../ducks/cart';
-import ListLineItems from '../components/ListLineItems';
+import { listLineItems } from '../ducks/cart';
+import Cart from '../components/Cart';
 
-//s'ha de fer un nou stateCart per connectar amb la cart i també una altre per els productes
 const mapStateToProps = (state, ownProps) => ({
-  itemList: listLineItems(state)
+  itemsList: listLineItems(state)
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({});
@@ -14,6 +11,6 @@ const mapDispatchToProps = (dispatch, ownProps) => ({});
 const StateCart = connect(
   mapStateToProps,
   mapDispatchToProps
-)(ListLineItems);
+)(Cart);
 
 export default StateCart;

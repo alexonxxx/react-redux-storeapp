@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import StateLink from '../containers/StateLink';
-import StateAdd from '../containers/StateAdd';
+import StateIncrementButton from '../containers/StateIncrementButton';
 
 class ProductListItem extends Component {
   render() {
+    const { product } = this.props;
     return (
       <div
         style={{
@@ -22,10 +23,9 @@ class ProductListItem extends Component {
         <div style={{ flex: '1' }}>
           <h4 style={{ margin: '0' }}>{this.props.product.name}</h4>
           <h3 style={{ margin: '0' }}>{this.props.product.price}€</h3>
-          <StateAdd product={this.props.product}>Add in card</StateAdd>
-
+          <StateIncrementButton product={product} children="Add" />
           <StateLink view="detail" itemId={this.props.product.id}>
-            details...
+            details product
           </StateLink>
         </div>
       </div>

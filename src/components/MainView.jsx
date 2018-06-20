@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import ProductList from './ProductList';
+import StateProductList from '../containers/StateProductList';
 
 class MainView extends Component {
   render() {
     return (
       <div>
         <h1>List of Available Products</h1>
-        <ProductList products={this.props.productList} />
+        <StateProductList products={this.props.products} />
       </div>
     );
   }
