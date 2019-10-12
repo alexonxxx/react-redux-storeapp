@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 import { listLineItems } from '../ducks/cart';
-import Cart from '../components/Cart';
+import ListLineItems from '../components/ListLineItems';
 
 const mapStateToProps = (state, ownProps) => ({
-  itemsList: listLineItems(state)
+  itemList: listLineItems(state)
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({});
@@ -11,6 +11,6 @@ const mapDispatchToProps = (dispatch, ownProps) => ({});
 const StateCart = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Cart);
+)(ListLineItems);
 
 export default StateCart;

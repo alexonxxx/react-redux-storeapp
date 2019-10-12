@@ -15,7 +15,7 @@ class Header extends Component {
         }}
       >
         <strong style={{ flex: '1' }}>
-          <StateLink view="main">Online Fruit Shop</StateLink>
+          <StateLink view="main">products</StateLink>
         </strong>
         <span>
           <StateLink view="cart">

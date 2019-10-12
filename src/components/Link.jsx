@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 class Link extends Component {
   onClick = event => {
-    event.preventDefault();
     this.props.onClick();
   };
 

@@ -1,10 +1,9 @@
 import { connect } from 'react-redux';
-import { getTotalItems, getTotalPrice } from '../ducks/cart';
+import { getTotalItems } from '../ducks/cart';
 import TotalItems from '../components/TotalItems';
 
 const mapStateToProps = (state, ownProps) => ({
-  totalItems: getTotalItems(state),
-  totalPrice: getTotalPrice(state)
+  totalItems: getTotalItems(state)
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({});
